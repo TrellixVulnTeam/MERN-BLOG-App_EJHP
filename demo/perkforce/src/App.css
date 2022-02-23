@@ -1,0 +1,72 @@
+@import '~antd/dist/antd.css';
+.App {
+  text-align: center;
+}
+.main-heading {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.input__field {
+  margin-top: 60px;
+  width: 400px;
+  border-radius: 20px;
+}
+.password {
+  margin-top: 40px;
+  width: 400px ;
+  border-radius: 20px;
+}
+.logIn {
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+  .signUp {
+border-radius: 10px;
+  }
+
+.text-last{
+  margin-bottom: 100px;
+}
+
+.my-signup{
+  text-align: center;
+}
+.name1,.email,.country,.password2,.education{
+  border-radius: 20px;
+  margin-top: 5px;
+}
+#components-layout-demo-responsive.logo{
+  height: 32px;
+  margin: 16px;
+  background: rgba(209, 26, 26, 0.2);
+}
+
+.site-layout-sub-header-background {
+  background: #fff;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.site-layout-sub-header-background{
+  text-align: center;
+  font-size: 50px;
+  color:#2F7AC5;
+  margin-left: 0;
+  
+}
+.side-menu{ 
+  /* border-top:10px; */
+}
+.last-side{ 
+  margin-bottom:0;
+}
+.site-card-wrapper{
+  margin-bottom: 40px;
+}
+.footer-per{
+  /* margin-top: 20px; */
+  text-align: center;
+}
