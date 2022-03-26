@@ -2,11 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.resolve(__dirname, './public'),
-    filename:"bundled.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: "bundled.js"
   },
   module: {
     rules: [
@@ -21,20 +21,27 @@ module.exports = {
         }
       },
       {
-        test: /\.(css)$/,
-        use:['style-loader','css-loader']
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ],
   },
-  // devServer: {
-  //   port: 4001,
-  //   host: '0.0.0.0',
-  //   allowedHosts: ['.cc-propeller.cloud'],
-  //   publicPath: path.join(__dirname, 'dist'),
-  //     },
+  // devtool:"source-map",
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: 3000,
+    open: true,
+    compress: true,
+    historyApiFallback: true,
+    hot: true
+  },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: path.join(__dirname, "src", "index.html"),
-    // }),
+    new HtmlWebpackPlugin({
+      title: "Perkforce webpack app",
+      filename: "index.html",
+      template: "src/template.html"
+    }),
   ],
 }

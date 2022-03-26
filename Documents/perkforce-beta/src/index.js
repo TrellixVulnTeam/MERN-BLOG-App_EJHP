@@ -1,18 +1,15 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import './styles/main.scss';
+import ReactDOM from 'react-dom';
 
-const App = ()=>{ 
-    return(
+
+
+const App = () => {
+    return (
         <>
-  <div className="container">
-            <div className="header">
-                <h1>Welcome to React application</h1>
-            </div>
-        </div>
+            <h1>Welcome to React application,here we can add a lot of functionality</h1>
         </>
     )
 }
 
-export default App;
-
-// ReactDOM.render(<h1>hello world</h1>, document.getElementById("root"))
+ReactDOM.render(<App />, document.getElementById("root"))
